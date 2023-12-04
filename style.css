@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav
+{
+    position: absolute;
+    top: 0;
+    height: 150px;
+    width: 100vw;
+}
+.navcontact{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navcontact .contact{
+    display: flex;
+    justify-content: space-around;
+height: 60px;
+align-items: center;
+gap: 50px;
+
+}
+.navcontact .contact div {
+    height: 50px;
+    width: 2px;
+    background-color: white;
+}
+.navcontact h3 a{
+color: red;
+text-decoration: none;
+}
+.navbar{
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.258) ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+}
+.navbar h1{
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.main{
+
+    height: 700px;
+    background-image: url(back.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+}
+.main h2{
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+}
+.main h3{
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+}
+
+.buttons *{
+    height: 45px;
+    width: 150px;
+
+border: 4px solid white;
+font-size: 1.2rem;
+transition: all 0.4s linear;
+
+}
+.buttons :nth-child(1){
+    background-color: white;
+    color: red;
+}
+.buttons :nth-child(1):hover{
+    background-color: transparent;
+    color:white
+}
+.buttons :nth-child(2 ){
+    background-color: transparent;
+    color: white;
+
+}
+
+.buttons :nth-child(2):hover{
+    background-color: white;
+    color:  red;
+
+}
+.main img{
+    animation: anim 4s linear infinite;
+}
+
+
+@keyframes anim {
+0%{
+ transform:  translateY(-200px);
+}   
+50%{
+    transform: translateY(200px
+    );
+
+} 
+100%{
+    transform: translateY(-200px);
+
+}
+}
+
+
+section
+{
+    height: 1000px;
+    background-color: gray;
+    padding: 30px;
+
+}
+.text{
+
+}
+.grid{
+width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+ margin: auto ;
+}
+.items{
+
+    overflow: hidden;
+position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.116);
+    border: 1px solid rgba(245, 222, 179, 0.147);
+}
+
+.hidden{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+    background-image: url(back.jpg);
+    background-size: cover;
+    opacity: 0;
+transition: all 0.5s ease;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.items:hover .hidden{
+    left: 0;
+    opacity:100;
+    z-index: 10;
+}
