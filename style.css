@@ -60,6 +60,7 @@ text-decoration: none;
     height: 700px;
     background-image: url(back.jpg);
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -112,15 +113,15 @@ transition: all 0.4s linear;
 
 @keyframes anim {
 0%{
- transform:  translateY(-200px);
+ transform:  translate(-20px);
 }   
 50%{
-    transform: translateY(200px
+    transform: translate(20px
     );
 
 } 
 100%{
-    transform: translateY(-200px);
+    transform: translate(-20px);
 
 }
 }
@@ -131,10 +132,15 @@ section
     height: 1000px;
     background-color: gray;
     padding: 30px;
+    background-image: url(image.jpg);
+    background-size: cover;
+    
 
 }
 .text{
-
+line-height: 50px;
+color:white;
+margin: 50px 0;
 }
 .grid{
 width: fit-content;
@@ -151,9 +157,15 @@ position: relative;
     height: 350px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 55px;
+    padding-top: 10%;
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 10px;
+    
+
     background-color: rgba(0, 0, 0, 0.116);
-    border: 1px solid rgba(245, 222, 179, 0.147);
+    border: 2px solid rgba(245, 222, 179, 0.147);
 }
 
 .hidden{
@@ -171,8 +183,88 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.items button{
+    width: 150px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    border: 2px solid white;
+}
 .items:hover .hidden{
     left: 0;
     opacity:100;
     z-index: 10;
+}
+.strategy{
+    height: 500px;
+    display: flex;
+    padding: 0px 80px;
+
+}
+.strategy div {
+    flex: 2;
+}
+
+.strategy img {
+    height: 300;
+    flex: 1;
+
+}
+.strategy .text{
+font-size: 1.5rem;
+    color: black;
+    line-height: 60px;
+    margin: 40px 0;
+
+}
+
+.strategy ul{
+
+    list-style: none;
+    display: flex;
+position: relative;
+}
+
+.strategy ul li {
+    width: 220px;
+    height: 45px;
+    text-align: center;
+    
+cursor: pointer;
+transition: all 0.2s ease;
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+background-color: rgb(255, 255, 255);
+}
+.strategy ul li:hover{
+    background-color: red !important;
+
+} 
+.styleddiv{
+    width: 220px;
+    height: 45px;
+cursor: pointer;
+transition: all 0.2s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+
+    background-color: red !important;
+}
+
+
+.strategy ul li div{
+   display: none;
+
+}
+.strategy ul .styleddiv div{
+    display: block;
+
+    position: absolute;
+    left: 0;
+    top: 80px;
+    padding: 40px;
+    border: 2px solid black;
+
 }
